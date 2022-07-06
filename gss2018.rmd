@@ -1,7 +1,7 @@
 ---
 title: "General Social Survey"
 author: "Carmen Ramos-Caminos"
-date: "July 5, 2022 Summer 2022"
+date: "July 5, 2022"
 output: 
   html_document:
     number_sections: true
@@ -26,14 +26,15 @@ source("GrabData.R")
 The data in the dataframe GSSdata is from the 2018 General Social Survey. The first blocks of R-code has selected down a subset of the data to just 16 variables. It has further removed unwanted factor levels in much of the data. Examine the code in the GrabData.R file to see what it is doing. Some of the variables are categorical and others are numerical. Be sure to do a variable analysis before tackling each question.  
 First question - Is opinion on the death penalty (CAPPUN) independent of gun ownership (OWNGUN)?  
 
-$H_0$ The opinion on the death penalty is not dependent of gun ownership    
+$H_0$ The opinion on the death penalty is not dependent of gun ownership  
+
 $H_A$ The opinion of death penalty is dependent of gun ownership 
 
 ## Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->  
 
-Both variables are categorical; each with two levels OWNGUN Yes or No? CAPPUN Yes or No.  
+Both variables are categorical; each with two levels OWNGUN Yes or No? CAPPUN Yes or No?  
 We will use the cat~cat analysis, chi-squared test of independence. We will use the Fisher exact test for odds ratio. 
 
 ##Results
