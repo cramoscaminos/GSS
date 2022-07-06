@@ -77,7 +77,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
+I reject the  $H_0$ null hypothesis and accept the alternative. The p-value is less than 0.05. 
 The p-value is 0.02022. People who own guns are 2.2x more likely to favor capital punishment. 
 
 
