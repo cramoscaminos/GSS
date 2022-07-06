@@ -132,6 +132,7 @@ Based on the chart above it shows that the median years of education of those wh
 
 ### Inferential Results
 
+<<<<<<< HEAD
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->  
 
 ```{r}
@@ -140,16 +141,25 @@ t.test(EDUC~VOTE12,  data=GSSdata )
   
 The T-test shows that the P-value is 0.0000001248 a number significantly less than 0.05. I reject the null hypothesis, and I accept the alternative hypothesis. Voting in 2012 is dependent on the years of education, and it is a factor that determined whether or not individuals voted.  
 
+=======
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfy the assumptions and is appropriate to answer the research question!-->
+>>>>>>> Question3
 
 #  Question 3
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
-Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
+Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).  
+
+$H_0$ There is no difference between the average score on the WORDSUM test and the level of schooling DEGREE.  
+
+$H_A$ There is a significant difference on the average score on the WORDSUM test between at least two levels of DEGREE.  
 
 ## Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->  
+
+WORDSUM is a numerical variable. DEGREE is a categorical variable. We will use the num~cat. 
 
 ##Results
 
@@ -159,18 +169,38 @@ Determine if a persons performance on the wordsum test (WORDSUM) is independent 
 
 #### Graphical Descriptive Results
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->   
+
+```{r}
+boxplot(WORDSUM~DEGREE,data=GSSdata)
+```
+  
+By looking at the box plot it appears that students with less than high school education have median scores in the same range of bottom 25 percent of high school education. When comparing individuals with less than high school education and graduate students; the graduate students lowest scores are still higher than 75 percent of those with less than high school education.    
 
 #### Numerical Descriptive Results
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->   
+
+```{r}
+favstats(WORDSUM~DEGREE,data=GSSdata)
+```
+  
+The graduate student median is 10. It appears that there is a significant difference in the scores on the WORDSUM tests attributed to the level of education.  Graduate students scored significantly higher when compared to high school and those with less than high school education.  
 
 ### Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->. 
+
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=GSSdata)
+summary.aov(model1)
+```
+The P-value is 0.00000025 significantly less than 0.05. Thus I reject the null hypothesis, and  I accept the alternative hypothesis. There is a significant difference on the average score on the WORDSUM test between at least two levels of DEGREE. 
 
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!--> 
+
+First, we discovered that there is a significant difference with the opinion in favor of the capital punishment by individuals who own guns. Those who do not own guns have similar opinions about 50/50 either way. Next we discovered that individuals with higher education, or more years of education, tend to vote more often in elections as proven from the data in 2012. Last, we discovered that individuals with higher education tend to produce higher test scores than those with high school and less than a high school education; proving that education is a significant factor in higher test scores. It would be interesting to discover how many of those who own guns and are in favor of capital punishment are highly educated. 
 
