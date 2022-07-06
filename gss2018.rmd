@@ -111,11 +111,13 @@ By looking at the box plot it appears that students with less than high school e
 
 #### Numerical Descriptive Results
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!--> 
+<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->   
 
 ```{r}
 favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
+  
+The graduate student median is 10. It appears that there is a significant difference in the scores on the WORDSUM tests attributed to the level of education.  Graduate students scored significantly higher when compared to high school and those with less than high school education.  
 
 ### Inferential Results
 
