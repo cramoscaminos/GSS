@@ -1,7 +1,11 @@
 ---
 title: "General Social Survey"
 author: "Carmen Ramos-Caminos"
+<<<<<<< HEAD
 date: "July 5, 2022"
+=======
+date: "July 5, 2022 "
+>>>>>>> Question1
 output: 
   html_document:
     number_sections: true
@@ -67,7 +71,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-People who own guns are 75.68 in favor of capital punishment; while 24.32 of gun owners oppose capital punishment.That is a significat difference. In comparison, people who do not own guns are 57.69 in favor versus to 42.31 of non gun owners who oppose capital punishment. That is not much of a difference. 
+People who own guns are 75.68 in favor of capital punishment; while 24.32 of gun owners oppose capital punishment.That is a significat difference. In comparison, people who do not own guns are 57.69 in favor versus to 42.31 of non gun owners who oppose capital punishment. There is not much of a difference. 
 
 ### Inferential Results
 
