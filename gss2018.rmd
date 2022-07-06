@@ -101,6 +101,9 @@ Based on the chart above it shows that the median years of education of those wh
 ```{r}
 t.test(EDUC~VOTE12,  data=GSSdata )
 ```
+  
+The T-test shows that the P-value is 0.0000001248 a number significantly less than 0.05. I reject the null hypothesis, and I accept the alternative hypothesis. Voting in 2012 is dependent on the years of education, and is a factor that determined whether or not individuals voted.  
+
 
 #  Question 3
 
