@@ -66,7 +66,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-People who own guns are 75.68 in favor of capital punishment; while 24.32 of gun owners oppose capital punishment. 
+People who own guns are 75.68 in favor of capital punishment; while 24.32 of gun owners oppose capital punishment.That is a significat difference. In comparison, people who do not own guns are 57.69 in favor versus to 42.31 of non gun owners who oppose capital punishment. That is not much of a difference. 
 
 ### Inferential Results
 
@@ -78,10 +78,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-I reject the  $H_0$ null hypothesis and accept the alternative. The p-value is less than 0.05. 
-The p-value is 0.02022. People who own guns are 2.2x more likely to favor capital punishment. 
-
-
+The p-value is 0.02022 less than 0.05. I reject the  $H_0$ null hypothesis and accept the alternative. Individuals opinion on the death penalty is dependent on gun ownership. The odds ratio is 2.271. People who own guns are 2.2x more likely to favor capital punishment.   
 
 #  Question 2
 
