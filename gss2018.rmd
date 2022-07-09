@@ -1,11 +1,7 @@
 ---
 title: "General Social Survey"
 author: "Carmen Ramos-Caminos"
-<<<<<<< HEAD
 date: "July 5, 2022"
-=======
-date: "July 5, 2022 "
->>>>>>> Question1
 output: 
   html_document:
     number_sections: true
