@@ -1,6 +1,6 @@
 ---
 title: "General Social Survey"
-author: "Carmen Ramos-Caminos "
+author: "Carmen Ramos-Caminos"
 date: "July 5, 2022"
 output: 
   html_document:
